@@ -1,0 +1,158 @@
+"""Attention module with optional cross-attention sliding-window bypass.
+
+The decoder needs full access to the encoded prefix even when its own
+self-attention is sliding-windowed. We add an explicit
+``cross_attn_window`` mechanism: a boolean mask indicating which key
+positions belong to the cross-attention prefix; those positions are
+never masked out by the sliding-window rule.
+"""
+
+import math
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch import Tensor
+from typing import Optional, Tuple
+from .utils import _softcap
+
+
+def _rope_freqs(head_dim: int, theta: float, max_pos: int = 131072,
+                proportional: bool = False) -> Tensor:
+    """Return cos/sin tables of shape (max_pos, head_dim/2)."""
+    half = head_dim // 2
+    # standard: 1/theta^(2i/d); proportional: 1/theta^(2i/(pi*d))
+    if proportional:
+        exponents = torch.arange(0, half, dtype=torch.float32) / half
+        inv_freq = 1.0 / (theta ** exponents)
+    else:
+        inv_freq = 1.0 / (theta ** (torch.arange(0, half, dtype=torch.float32) * 2.0 / head_dim))
+    pos = torch.arange(max_pos, dtype=torch.float32)
+    freqs = torch.outer(pos, inv_freq)
+    return freqs.cos().to(torch.float32), freqs.sin().to(torch.float32)
+
+
+def _apply_rope(q: Tensor, k: Tensor, cos: Tensor, sin: Tensor,
+                partial_rotary_factor: float = 1.0) -> Tuple[Tensor, Tensor]:
+    """Apply RoPE; rotates only the first ``partial*head_dim`` dims of each head."""
+    b, h, t, d = q.shape
+    pr = max(2, int(d * partial_rotary_factor))
+    pr -= pr % 2
+    if cos.dim() == 2:
+        cos = cos[:t].unsqueeze(0).unsqueeze(0)
+        sin = sin[:t].unsqueeze(0).unsqueeze(0)
+    if cos.size(-1) > pr // 2:
+        cos = cos[..., : pr // 2]
+        sin = sin[..., : pr // 2]
+
+    def rot(x: Tensor) -> Tensor:
+        x_rot, x_pass = x[..., :pr], x[..., pr:]
+        x1, x2 = x_rot.chunk(2, dim=-1)
+        out_rot = torch.cat([x1 * cos - x2 * sin,
+                             x2 * cos + x1 * sin], dim=-1)
+        return torch.cat([out_rot, x_pass], dim=-1)
+    return rot(q), rot(k)
+
+
+class GemmaAttention(nn.Module):
+    """Gemma-style attention with sliding/full modes and a cross-attention bypass.
+
+    When ``cross_prefix_mask`` is provided (shape ``(T,)`` boolean), those
+    key positions are exempt from the sliding-window constraint. This lets
+    the decoder attend to the full encoded prefix even when ``sliding_window``
+    is small.
+    """
+
+    def __init__(self, hidden_size: int, num_heads: int, num_kv_heads: int,
+                 head_dim: int, sliding_window: int, layer_type: str,
+                 rope_theta: float, rope_proportional: bool,
+                 partial_rotary_factor: float, max_pos: int,
+                 softcap: float = 30.0, dropout: float = 0.0):
+        super().__init__()
+        assert layer_type in ("sliding_attention", "full_attention")
+        self.layer_type = layer_type
+        self.num_heads = num_heads
+        self.num_kv_heads = num_kv_heads
+        self.head_dim = head_dim
+        self.sliding_window = sliding_window
+        self.softcap = softcap
+        self.partial_rotary_factor = partial_rotary_factor
+        self.dropout = dropout
+        q_out = num_heads * head_dim
+        kv_out = num_kv_heads * head_dim
+        self.q_proj = nn.Linear(hidden_size, q_out, bias=False)
+        self.k_proj = nn.Linear(hidden_size, kv_out, bias=False)
+        self.v_proj = nn.Linear(hidden_size, kv_out, bias=False)
+        self.o_proj = nn.Linear(q_out, hidden_size, bias=False)
+        self.register_buffer("rope_cos", _rope_freqs(head_dim, rope_theta, max_pos, rope_proportional)[0],
+                             persistent=False)
+        self.register_buffer("rope_sin", _rope_freqs(head_dim, rope_theta, max_pos, rope_proportional)[1],
+                             persistent=False)
+
+    def forward(self, x: Tensor, attn_mask: Optional[Tensor] = None,
+                position_ids: Optional[Tensor] = None,
+                past_kv: Optional[Tuple[Tensor, Tensor]] = None,
+                use_cache: bool = False,
+                is_bidir: bool = False,
+                cross_prefix_mask: Optional[Tensor] = None) -> Tuple[Tensor, Optional[Tuple[Tensor, Tensor]]]:
+        b, t, _ = x.shape
+        q = self.q_proj(x).view(b, t, self.num_heads, self.head_dim).transpose(1, 2)
+        k = self.k_proj(x).view(b, t, self.num_kv_heads, self.head_dim).transpose(1, 2)
+        v = self.v_proj(x).view(b, t, self.num_kv_heads, self.head_dim).transpose(1, 2)
+
+        if position_ids is None:
+            position_ids = torch.arange(t, device=x.device).unsqueeze(0)
+        cos = self.rope_cos.to(x.dtype)
+        sin = self.rope_sin.to(x.dtype)
+        cos = cos[position_ids].unsqueeze(1)
+        sin = sin[position_ids].unsqueeze(1)
+        q, k = _apply_rope(q, k, cos, sin, self.partial_rotary_factor)
+
+        if past_kv is not None:
+            pk, pv = past_kv
+            k = torch.cat([pk, k], dim=2)
+            v = torch.cat([pv, v], dim=2)
+        new_kv = (k, v) if use_cache else None
+        T = k.size(2)
+
+        rep = self.num_heads // self.num_kv_heads
+        if rep > 1:
+            k = k.repeat_interleave(rep, dim=1)
+            v = v.repeat_interleave(rep, dim=1)
+
+        # Build additive attention bias.
+        attn_bias = torch.zeros(t, T, device=x.device, dtype=x.dtype)
+        if not is_bidir:
+            causal = torch.ones(t, T, dtype=torch.bool, device=x.device).tril(T - t)
+            attn_bias = attn_bias.masked_fill(~causal, float("-inf"))
+
+        if self.layer_type == "sliding_attention" and self.sliding_window is not None:
+            qpos = torch.arange(t, device=x.device) + (T - t)
+            kpos = torch.arange(T, device=x.device)
+            win = (qpos.unsqueeze(1) - kpos.unsqueeze(0)) <= self.sliding_window
+            win &= (qpos.unsqueeze(1) - kpos.unsqueeze(0)) >= 0
+            # Bypass: cross-attention prefix positions stay visible regardless
+            # of sliding window. ``cross_prefix_mask`` has shape ``(T,)`` and
+            # marks which columns of the (t, T) attention matrix are exempt.
+            if cross_prefix_mask is not None:
+                win = win | cross_prefix_mask.unsqueeze(0)
+            attn_bias = attn_bias.masked_fill(~win, float("-inf"))
+
+        if attn_mask is not None:
+            if attn_mask.dim() == 2:
+                attn_bias = attn_bias + attn_mask[:, -t:]
+            else:
+                attn_bias = attn_bias + attn_mask[..., -t:, :]
+        attn_bias = attn_bias.unsqueeze(0).unsqueeze(0)
+
+        scores = (q @ k.transpose(-1, -2)) / math.sqrt(self.head_dim)
+        scores = scores + attn_bias
+        if self.softcap and self.softcap > 0:
+            scores = _softcap(scores, self.softcap)
+        probs = scores.softmax(dim=-1)
+        if self.dropout and self.training:
+            probs = F.dropout(probs, p=self.dropout)
+        out = probs @ v
+
+        out = out.transpose(1, 2).contiguous().view(b, t, -1)
+        out = self.o_proj(out)
+        return out, new_kv

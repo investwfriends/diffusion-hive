@@ -1,0 +1,12 @@
+RESULT device=cuda player=fast3 games=40 wins=7 losses=2 draws=31 win_rate=0.175
+# Eval Results: fast vs random
+
+| Metric | Value |
+|--------|-------|
+| Games | 40 |
+| Wins | 7 (17.5%) |
+| Losses | 2 (5.0%) |
+| Draws | 31 (77.5%) |
+| Win Rate 95% CI | [8.7%, 32.0%] |
+| Mean Game Length | 154.8 plies |
+EXIT=0

@@ -1,0 +1,29 @@
+[
+  {
+    "win_rate": 0.11,
+    "wins": 11,
+    "losses": 0,
+    "draws": 89,
+    "mean_plies": 179.78,
+    "step": 4000,
+    "checkpoint": "/workspace/runs/plan_run/final_model.pt"
+  },
+  {
+    "win_rate": 0.11,
+    "wins": 11,
+    "losses": 0,
+    "draws": 89,
+    "mean_plies": 179.78,
+    "step": 4000,
+    "checkpoint": "/workspace/runs/plan_run/last_model.pt"
+  },
+  {
+    "win_rate": 0.09,
+    "wins": 9,
+    "losses": 3,
+    "draws": 88,
+    "mean_plies": 177.16,
+    "step": 2000,
+    "checkpoint": "/workspace/runs/plan_run/checkpoints/step_002000.pt"
+  }
+]

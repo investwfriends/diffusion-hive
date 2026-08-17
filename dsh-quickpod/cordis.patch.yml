@@ -1,0 +1,8 @@
+# dsh-quickpod bundle patch: inserts the QuickPod plugin row over the profile
+# root. The row id is addressable from later patch layers; config may be
+# overridden in the profile cordis.patch.yml or a --patch overlay.
+- insert:
+    - id: quickpod
+      name: 'dsh-quickpod'
+      config:
+        baseUrl: !!js process.env.QUICKPOD_BASE_URL || 'https://api.quickpod.org'

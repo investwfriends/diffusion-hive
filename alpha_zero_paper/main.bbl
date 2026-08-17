@@ -1,0 +1,190 @@
+\begin{thebibliography}{10}
+
+\bibitem{chess365}
+Online chess games database, 365chess, 2017.
+\newblock URL: \textit{https://www.365chess.com/}.
+
+\bibitem{Allis94}
+Victor Allis.
+\newblock {\em Searching for Solutions in Games and Artificial Intelligence}.
+\newblock PhD thesis, University of Limburg, Netherlands, 1994.
+
+\bibitem{anthony:hex}
+Thomas Anthony, Zheng Tian, and David Barber.
+\newblock Thinking fast and slow with deep learning and tree search.
+\newblock In {\em Advances in Neural Information Processing Systems 30: Annual
+  Conference on Neural Information Processing Systems 2017, 4-9 December 2017,
+  Long Beach, CA, {USA}}, pages 5366--5376, 2017.
+
+\bibitem{arenz:mcc}
+Oleg Arenz.
+\newblock Monte {C}arlo chess.
+\newblock Master's thesis, Technische Universitat Darmstadt, 2012.
+
+\bibitem{WCSC27}
+Computer~Shogi Association.
+\newblock Results of the 27th world computer shogi championship.
+\newblock \url{http://www2.computer-shogi.org/wcsc27/index_e.html}. Retrieved
+  November 29th, 2017.
+
+\bibitem{baxter:knightcap}
+J.~Baxter, A.~Tridgell, and L.~Weaver.
+\newblock Learning to play chess using temporal differences.
+\newblock {\em Machine Learning}, 40(3):243--263, 2000.
+
+\bibitem{BealSmith00}
+Donald~F. Beal and Martin~C. Smith.
+\newblock Temporal difference learning for heuristic search and game playing.
+\newblock {\em Inf. Sci.}, 122(1):3--21, 2000.
+
+\bibitem{BealSmith01}
+Donald~F. Beal and Martin~C. Smith.
+\newblock Temporal difference learning applied to game playing and the results
+  of application to shogi.
+\newblock {\em Theoretical Computer Science}, 252(1--2):105--119, 2001.
+
+\bibitem{Campbell02DeepBlue}
+M.~Campbell, A.~J. Hoane, and F.~Hsu.
+\newblock {D}eep {B}lue.
+\newblock {\em Artificial Intelligence}, 134:57--83, 2002.
+
+\bibitem{coulom:bayeselo}
+R.~Coulom.
+\newblock Whole-history rating: A {B}ayesian rating system for players of
+  time-varying strength.
+\newblock In {\em International Conference on Computers and Games}, pages
+  113--124, 2008.
+
+\bibitem{david2016deepchess}
+Omid~E David, Nathan~S Netanyahu, and Lior Wolf.
+\newblock Deepchess: End-to-end deep neural network for automatic learning in
+  chess.
+\newblock In {\em International Conference on Artificial Neural Networks},
+  pages 88--96. Springer, 2016.
+
+\bibitem{HokiKaneko14}
+Kunihito Hoki and Tomoyuki Kaneko.
+\newblock Large-scale optimization for evaluation functions with minimax
+  search.
+\newblock {\em Journal of Artificial Intelligence Research (JAIR)},
+  49:527--568, 2014.
+
+\bibitem{FengHsiung02DeepBlue}
+Feng-hsiung Hsu.
+\newblock {\em Behind {D}eep {B}lue: Building the Computer that Defeated the
+  World Chess Champion}.
+\newblock Princeton University Press, 2002.
+
+\bibitem{Iida02Shogi}
+Hiroyuki Iida, Makoto Sakuta, and Jeff Rollason.
+\newblock Computer shogi.
+\newblock {\em Artificial Intelligence}, 134:121--144, 2002.
+
+\bibitem{jouppi:tpu}
+Norman~P. Jouppi, Cliff Young, Nishant Patil, et~al.
+\newblock In-datacenter performance analysis of a tensor processing unit.
+\newblock In {\em Proceedings of the 44th Annual International Symposium on
+  Computer Architecture}, ISCA '17, pages 1--12. ACM, 2017.
+
+\bibitem{KanekoHoki11}
+Tomoyuki Kaneko and Kunihito Hoki.
+\newblock Analysis of evaluation-function learning by comparison of sibling
+  nodes.
+\newblock In {\em Advances in Computer Games - 13th International Conference,
+  {ACG} 2011, Tilburg, The Netherlands, November 20-22, 2011, Revised Selected
+  Papers}, pages 158--169, 2011.
+
+\bibitem{Knudsen00Essential}
+John Knudsen.
+\newblock {\em Essential Chess Quotations}.
+\newblock iUniverse, 2000.
+
+\bibitem{KnuthMoore75}
+D.~E. Knuth and R.~W Moore.
+\newblock An analysis of alpha–beta pruning.
+\newblock {\em Artificial Intelligence}, 6(4):293–--326, 1975.
+
+\bibitem{lai:giraffe}
+Matthew Lai.
+\newblock Giraffe: Using deep reinforcement learning to play chess.
+\newblock Master's thesis, Imperial College London, 2015.
+
+\bibitem{Lasker65Common}
+Emanuel Lasker.
+\newblock {\em Common Sense in Chess}.
+\newblock Dover Publications, 1965.
+
+\bibitem{LevyNewborn09}
+David N.~L. Levy and Monty Newborn.
+\newblock {\em How Computers Play Chess}.
+\newblock Ishi Press, 2009.
+
+\bibitem{maddison:deepgo}
+Chris~J. Maddison, Aja Huang, Ilya Sutskever, and David Silver.
+\newblock Move evaluation in {G}o using deep convolutional neural networks.
+\newblock In {\em International Conference on Learning Representations}, 2015.
+
+\bibitem{Marsland87}
+Tony Marsland.
+\newblock Computer chess methods.
+\newblock In S.~Shapiro, editor, {\em Encyclopedia of Artificial Intelligence}.
+  John Wiley \& sons, New York, 1987.
+
+\bibitem{ramanujan:uct-fail}
+Raghuram Ramanujan, Ashish Sabharwal, and Bart Selman.
+\newblock Understanding sampling style adversarial search methods.
+\newblock In {\em Proceedings of the 26th Conference on Uncertainty in
+  Artificial Intelligence (UAI)}, 2010.
+
+\bibitem{Stockfish}
+Tord Romstad, Marco Costalba, Joona Kiiski, et~al.
+\newblock Stockfish: A strong open source chess engine.
+\newblock \url{https://stockfishchess.org/}. Retrieved November 29th, 2017.
+
+\bibitem{samuel:recent}
+A.~L. Samuel.
+\newblock Some studies in machine learning using the game of checkers {II} -
+  recent progress.
+\newblock {\em IBM Journal of Research and Development}, 11(6):601--617, 1967.
+
+\bibitem{shannon1950xxii}
+Claude~E Shannon.
+\newblock Xxii. programming a computer for playing chess.
+\newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 41(314):256--275, 1950.
+
+\bibitem{Silver16AG}
+David Silver, Aja Huang, Chris~J. Maddison, Arthur Guez, Laurent Sifre, George
+  van~den Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda
+  Panneershelvam, Marc Lanctot, Sander Dieleman, Dominik Grewe, John Nham, Nal
+  Kalchbrenner, Ilya Sutskever, Timothy Lillicrap, Madeleine Leach, Koray
+  Kavukcuoglu, Thore Graepel, and Demis Hassabis.
+\newblock Mastering the game of {Go} with deep neural networks and tree search.
+\newblock {\em Nature}, 529(7587):484--489, January 2016.
+
+\bibitem{Silver17AG0}
+David Silver, Julian Schrittwieser, Karen Simonyan, Ioannis Antonoglou, Aja
+  Huang, Arthur Guez, Thomas Hubert, Lucas Baker, Matthew Lai, Adrian Bolton,
+  Yutian Chen, Timothy Lillicrap, Fan Hui, Laurent Sifre, George van~den
+  Driessche, Thore Graepel, and Demis Hassabis.
+\newblock Mastering the game of go without human knowledge.
+\newblock {\em Nature}, 550:354--359, 2017.
+
+\bibitem{Steinitz90Modern}
+Wilhelm Steinitz.
+\newblock {\em The Modern Chess Instructor}.
+\newblock Edition Olms AG, 1990.
+
+\bibitem{thrun:neurochess}
+Sebastian Thrun.
+\newblock Learning to play the game of chess.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1069--1076, 1995.
+
+\bibitem{veness:rootstrap}
+J.~Veness, D.~Silver, A.~Blair, and W.~Uther.
+\newblock Bootstrapping from game tree search.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  1937--1945, 2009.
+
+\end{thebibliography}

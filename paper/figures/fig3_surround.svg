@@ -1,0 +1,18 @@
+<svg width="600" height="310" viewBox="0 0 600 310" xmlns="http://www.w3.org/2000/svg">
+<rect width="600" height="310" fill="#ffffff"/>
+<polygon points="337.3,44.8 337.3,88.0 300.0,109.5 262.7,88.0 262.7,44.8 300.0,23.3" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.6"/>
+<text x="300.0" y="70.4" text-anchor="middle" font-size="17" fill="#4338ca" font-family="ui-sans-serif,system-ui">⬢</text>
+<polygon points="409.9,86.6 409.9,129.8 372.6,151.3 335.3,129.8 335.3,86.6 372.6,65.1" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.6"/>
+<text x="372.6" y="112.2" text-anchor="middle" font-size="17" fill="#4338ca" font-family="ui-sans-serif,system-ui">⬢</text>
+<polygon points="409.9,170.2 409.9,213.4 372.6,234.9 335.3,213.4 335.3,170.2 372.6,148.7" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.6"/>
+<text x="372.6" y="195.8" text-anchor="middle" font-size="17" fill="#4338ca" font-family="ui-sans-serif,system-ui">⬢</text>
+<polygon points="337.3,212.0 337.3,255.2 300.0,276.7 262.7,255.2 262.7,212.0 300.0,190.5" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.6"/>
+<text x="300.0" y="237.6" text-anchor="middle" font-size="17" fill="#4338ca" font-family="ui-sans-serif,system-ui">⬢</text>
+<polygon points="264.7,170.2 264.7,213.4 227.4,234.9 190.1,213.4 190.1,170.2 227.4,148.7" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.6"/>
+<text x="227.4" y="195.8" text-anchor="middle" font-size="17" fill="#4338ca" font-family="ui-sans-serif,system-ui">⬢</text>
+<polygon points="264.7,86.6 264.7,129.8 227.4,151.3 190.1,129.8 190.1,86.6 227.4,65.1" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.6"/>
+<text x="227.4" y="112.2" text-anchor="middle" font-size="17" fill="#4338ca" font-family="ui-sans-serif,system-ui">⬢</text>
+<polygon points="337.3,128.4 337.3,171.6 300.0,193.1 262.7,171.6 262.7,128.4 300.0,106.9" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="300" y="154" text-anchor="middle" font-size="15" font-weight="700" fill="#b91c1c" font-family="ui-sans-serif,system-ui">Q</text>
+<text x="300" y="290" text-anchor="middle" font-size="12" fill="#6b7280" font-family="ui-sans-serif,system-ui">queen fully surrounded ⇒ win; random rarely completes this</text>
+</svg>

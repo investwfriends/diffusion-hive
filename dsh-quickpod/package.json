@@ -1,0 +1,26 @@
+{
+  "name": "dsh-quickpod",
+  "version": "0.1.0",
+  "description": "QuickPod GPU/CPU cloud plugin for DeepSeek Harness: search, connect, deploy, and monitor AI training pods.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6"
+  }
+}

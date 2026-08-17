@@ -1,0 +1,52 @@
+# ---- Big data: keep in GitHub Release assets, not in git ----
+data/
+dataset_*.pt
+
+# ---- Mzinga venv / build ----
+Mzinga/.venv/
+Mzinga/.pytest_cache/
+Mzinga/build/
+.venv/
+venv/
+
+# ---- Engine binaries (re-downloadable: Linux via setup_cloud.sh, macOS from Mzinga releases) ----
+mzinga_uhp/Mzinga.LinuxX64/
+mzinga_uhp/Mzinga.LinuxX64.tar.gz
+mzinga_uhp/Mzinga.MacOSArm64/
+
+# ---- Training runs: keep only the best model + self-play experiment ----
+runs/*/
+!runs/plan_run/
+!runs/policy_soft/
+runs/plan_run/checkpoints/
+runs/plan_run/last_model.pt
+runs/plan_run/*.step*.pt
+runs/policy_soft/*.step*.pt
+
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# ---- Misc ----
+Gemma_Diffusion(2).ipynb
+.DS_Store
+nohup.out
+
+# ---- Secrets / local config ----
+.env
+.env.*
+.devin/
+*.local.json
+
+# ---- Compiled / build artifacts ----
+*.so
+*.o
+Mzinga/src/Mzinga.Viewer/obj/
+Mzinga/src/Mzinga.Viewer/bin/
+Mzinga/src/*/obj/
+Mzinga/src/*/bin/
+
+# ---- Colab scratch ----
+Mzinga/colab/drive/

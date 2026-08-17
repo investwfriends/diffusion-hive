@@ -1,0 +1,8 @@
+MzingaPerft
+
+perft( 0)   =                  1 in      0 ms.      0.0 KN/s
+perft( 1)   =                  4 in      0 ms.      0.0 KN/s
+perft( 2)   =                 96 in      0 ms.      0.0 KN/s
+perft( 3)   =               1440 in      3 ms.    480.0 KN/s
+perft( 4)   =              21600 in     58 ms.    372.4 KN/s
+perft( 5)   =             516240 in   1420 ms.    363.5 KN/s

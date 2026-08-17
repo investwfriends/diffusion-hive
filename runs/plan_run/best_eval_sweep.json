@@ -1,0 +1,38 @@
+[
+  {
+    "win_rate": 0.2,
+    "wins": 4,
+    "losses": 0,
+    "draws": 16,
+    "mean_plies": 176.0,
+    "step": 4000,
+    "checkpoint": "/workspace/runs/plan_run/final_model.pt"
+  },
+  {
+    "win_rate": 0.2,
+    "wins": 4,
+    "losses": 0,
+    "draws": 16,
+    "mean_plies": 176.0,
+    "step": 4000,
+    "checkpoint": "/workspace/runs/plan_run/last_model.pt"
+  },
+  {
+    "win_rate": 0.2,
+    "wins": 4,
+    "losses": 0,
+    "draws": 16,
+    "mean_plies": 157.5,
+    "step": 2000,
+    "checkpoint": "/workspace/runs/plan_run/checkpoints/step_002000.pt"
+  },
+  {
+    "win_rate": 0.2,
+    "wins": 4,
+    "losses": 0,
+    "draws": 16,
+    "mean_plies": 176.0,
+    "step": 4000,
+    "checkpoint": "/workspace/runs/plan_run/checkpoints/step_004000.pt"
+  }
+]

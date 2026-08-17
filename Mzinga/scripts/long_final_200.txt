@@ -1,0 +1,14 @@
+Benchmark: 3 games, 200 sims/move, hidden=128, blocks=2
+Model params: 317,617
+
+  game 1:  300 moves in   64.96s  (     924 sims/s)
+  game 2:  300 moves in   63.83s  (     940 sims/s)
+  game 3:  300 moves in   63.86s  (     940 sims/s)
+
+Total:     900 moves, 180000 sims in 192.66s (wall 193.05s)
+Games/sec: 0.016
+Moves/sec: 4.7
+Sims/sec:  934
+Avg game:  300.0 moves, 64.22s
+Median sims/s: 940
+Stdev sims/s:  9

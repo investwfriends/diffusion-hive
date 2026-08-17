@@ -1,0 +1,131 @@
+<svg width="760" height="510" viewBox="0 0 760 510" xmlns="http://www.w3.org/2000/svg">
+<rect width="760" height="510" fill="#ffffff"/>
+<g transform="translate(8,8)"><svg width="360" height="230" viewBox="0 0 360 230" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="360" height="230" fill="#ffffff"/>
+<line x1="58" y1="190.0" x2="344" y2="190.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="194.0" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">3.05</text>
+<line x1="58" y1="157.2" x2="344" y2="157.2" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="161.2" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">3.18</text>
+<line x1="58" y1="124.4" x2="344" y2="124.4" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="128.4" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">3.31</text>
+<line x1="58" y1="91.6" x2="344" y2="91.6" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="95.6" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">3.44</text>
+<line x1="58" y1="58.8" x2="344" y2="58.8" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="62.8" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">3.57</text>
+<line x1="58" y1="26.0" x2="344" y2="26.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="30.0" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">3.70</text>
+<polyline points="NaN,50.0 NaN,111.5 NaN,126.4 NaN,143.8 NaN,156.9 NaN,165.5 NaN,169.8 NaN,166.5" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="NaN" cy="50.0" r="2.8" fill="#2563eb"/>
+<circle cx="NaN" cy="111.5" r="2.8" fill="#2563eb"/>
+<circle cx="NaN" cy="126.4" r="2.8" fill="#2563eb"/>
+<circle cx="NaN" cy="143.8" r="2.8" fill="#2563eb"/>
+<circle cx="NaN" cy="156.9" r="2.8" fill="#2563eb"/>
+<circle cx="NaN" cy="165.5" r="2.8" fill="#2563eb"/>
+<circle cx="NaN" cy="169.8" r="2.8" fill="#2563eb"/>
+<circle cx="NaN" cy="166.5" r="2.8" fill="#2563eb"/>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">1000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">2000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">3000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">4000</text>
+<text x="201" y="14" text-anchor="middle" font-size="13" font-weight="600" fill="#111827" font-family="ui-sans-serif,system-ui">(a) policy loss (cross-entropy)</text>
+<text x="338" y="224" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">optimizer step</text>
+<text x="201" y="266" text-anchor="middle" font-size="11" fill="#9ca3af" font-family="ui-sans-serif,system-ui"></text>
+</svg></g>
+<g transform="translate(380,8)"><svg width="360" height="230" viewBox="0 0 360 230" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="360" height="230" fill="#ffffff"/>
+<line x1="58" y1="190.0" x2="344" y2="190.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="194.0" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0.30</text>
+<line x1="58" y1="157.2" x2="344" y2="157.2" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="161.2" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0.37</text>
+<line x1="58" y1="124.4" x2="344" y2="124.4" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="128.4" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0.44</text>
+<line x1="58" y1="91.6" x2="344" y2="91.6" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="95.6" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0.51</text>
+<line x1="58" y1="58.8" x2="344" y2="58.8" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="62.8" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0.58</text>
+<line x1="58" y1="26.0" x2="344" y2="26.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="30.0" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0.65</text>
+<polyline points="NaN,62.1 NaN,109.4 NaN,127.2 NaN,136.1 NaN,139.9 NaN,146.4 NaN,146.9 NaN,152.0" fill="none" stroke="#16a34a" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="NaN" cy="62.1" r="2.8" fill="#16a34a"/>
+<circle cx="NaN" cy="109.4" r="2.8" fill="#16a34a"/>
+<circle cx="NaN" cy="127.2" r="2.8" fill="#16a34a"/>
+<circle cx="NaN" cy="136.1" r="2.8" fill="#16a34a"/>
+<circle cx="NaN" cy="139.9" r="2.8" fill="#16a34a"/>
+<circle cx="NaN" cy="146.4" r="2.8" fill="#16a34a"/>
+<circle cx="NaN" cy="146.9" r="2.8" fill="#16a34a"/>
+<circle cx="NaN" cy="152.0" r="2.8" fill="#16a34a"/>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">1000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">2000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">3000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">4000</text>
+<text x="201" y="14" text-anchor="middle" font-size="13" font-weight="600" fill="#111827" font-family="ui-sans-serif,system-ui">(b) value loss (MSE)</text>
+<text x="338" y="224" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">optimizer step</text>
+<text x="201" y="266" text-anchor="middle" font-size="11" fill="#9ca3af" font-family="ui-sans-serif,system-ui"></text>
+</svg></g>
+<g transform="translate(8,262)"><svg width="360" height="230" viewBox="0 0 360 230" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="360" height="230" fill="#ffffff"/>
+<line x1="58" y1="190.0" x2="344" y2="190.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="194.0" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0%</text>
+<line x1="58" y1="157.2" x2="344" y2="157.2" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="161.2" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">4%</text>
+<line x1="58" y1="124.4" x2="344" y2="124.4" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="128.4" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">9%</text>
+<line x1="58" y1="91.6" x2="344" y2="91.6" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="95.6" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">13%</text>
+<line x1="58" y1="58.8" x2="344" y2="58.8" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="62.8" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">18%</text>
+<line x1="58" y1="26.0" x2="344" y2="26.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="30.0" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">22%</text>
+<polyline points="NaN,135.1 NaN,103.9 NaN,97.5 NaN,91.6 NaN,86.9 NaN,79.2 NaN,77.7 NaN,73.3" fill="none" stroke="#7c3aed" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="NaN" cy="135.1" r="2.8" fill="#7c3aed"/>
+<circle cx="NaN" cy="103.9" r="2.8" fill="#7c3aed"/>
+<circle cx="NaN" cy="97.5" r="2.8" fill="#7c3aed"/>
+<circle cx="NaN" cy="91.6" r="2.8" fill="#7c3aed"/>
+<circle cx="NaN" cy="86.9" r="2.8" fill="#7c3aed"/>
+<circle cx="NaN" cy="79.2" r="2.8" fill="#7c3aed"/>
+<circle cx="NaN" cy="77.7" r="2.8" fill="#7c3aed"/>
+<circle cx="NaN" cy="73.3" r="2.8" fill="#7c3aed"/>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">1000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">2000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">3000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">4000</text>
+<text x="201" y="14" text-anchor="middle" font-size="13" font-weight="600" fill="#111827" font-family="ui-sans-serif,system-ui">(c) policy top-1 agreement vs teacher</text>
+<text x="338" y="224" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">optimizer step</text>
+<text x="201" y="266" text-anchor="middle" font-size="11" fill="#9ca3af" font-family="ui-sans-serif,system-ui"></text>
+</svg></g>
+<g transform="translate(380,262)"><svg width="360" height="230" viewBox="0 0 360 230" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="360" height="230" fill="#ffffff"/>
+<line x1="58" y1="190.0" x2="344" y2="190.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="194.0" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">75%</text>
+<line x1="58" y1="157.2" x2="344" y2="157.2" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="161.2" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">80%</text>
+<line x1="58" y1="124.4" x2="344" y2="124.4" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="128.4" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">85%</text>
+<line x1="58" y1="91.6" x2="344" y2="91.6" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="95.6" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">90%</text>
+<line x1="58" y1="58.8" x2="344" y2="58.8" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="62.8" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">95%</text>
+<line x1="58" y1="26.0" x2="344" y2="26.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="50" y="30.0" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">100%</text>
+<polyline points="NaN,155.2 NaN,90.9 NaN,76.5 NaN,69.3 NaN,66.0 NaN,63.4 NaN,63.4 NaN,58.1" fill="none" stroke="#0891b2" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="NaN" cy="155.2" r="2.8" fill="#0891b2"/>
+<circle cx="NaN" cy="90.9" r="2.8" fill="#0891b2"/>
+<circle cx="NaN" cy="76.5" r="2.8" fill="#0891b2"/>
+<circle cx="NaN" cy="69.3" r="2.8" fill="#0891b2"/>
+<circle cx="NaN" cy="66.0" r="2.8" fill="#0891b2"/>
+<circle cx="NaN" cy="63.4" r="2.8" fill="#0891b2"/>
+<circle cx="NaN" cy="63.4" r="2.8" fill="#0891b2"/>
+<circle cx="NaN" cy="58.1" r="2.8" fill="#0891b2"/>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">0</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">1000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">2000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">3000</text>
+<text x="NaN" y="208" text-anchor="middle" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">4000</text>
+<text x="201" y="14" text-anchor="middle" font-size="13" font-weight="600" fill="#111827" font-family="ui-sans-serif,system-ui">(d) value ranking accuracy</text>
+<text x="338" y="224" text-anchor="end" font-size="11" fill="#6b7280" font-family="ui-sans-serif,system-ui">optimizer step</text>
+<text x="201" y="266" text-anchor="middle" font-size="11" fill="#9ca3af" font-family="ui-sans-serif,system-ui"></text>
+</svg></g>
+</svg>
