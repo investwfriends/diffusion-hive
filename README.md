@@ -11,7 +11,7 @@
 **Best model:** `runs/plan_run/final_model.pt` (plus `best_model.pt`, `metrics.jsonl`).
 
 **Training data — in the GitHub Release v1.0.0 assets, NOT in git.** Download from the Releases page into `data/`:
-- `dataset_plan.pt` (44,410 plan samples) — trained the best model
+- `dataset_plan.part_aa` + `dataset_plan.part_ab` — 44,410 plan samples (split; reassemble with `cat dataset_plan.part_aa dataset_plan.part_ab > dataset_plan.pt`) — **trained the best model**
 - `dataset_vsr.pt` (28,783 vs-random samples)
 - `sp_data.pt` (2,402 self-play visit-distribution samples)
 
