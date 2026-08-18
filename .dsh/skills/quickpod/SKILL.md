@@ -22,6 +22,13 @@ using this document.
   `QUICKPOD_API_KEY` on investwfriends/diffusion-hive (usable in CI/workflows as
   `${secrets.QUICKPOD_API_KEY}`), and locally at `~/.quickpod.json`
   (`{"token": "qpk_..."}`) on the original machine. Do not commit the key to git.
+- **Automatic injection**: the key is also a repo **Codespaces secret** on
+  investwfriends/diffusion-hive, so a Codespace opened on the repo gets
+  `QUICKPOD_API_KEY` as an env var automatically; CI workflows get it as
+  `${{ secrets.QUICKPOD_API_KEY }}`. Run `scripts/quickpod_setup.sh` once to
+  persist it to `~/.quickpod.json`. GitHub secrets are write-only, so on a fresh
+  local machine the value is not auto-readable — read it from the environment or
+  ask the user.
   - `X-API-Key: <key>`
   - `Authorization: ApiKey <key>`
 - Base URL: `https://api.quickpod.org`
