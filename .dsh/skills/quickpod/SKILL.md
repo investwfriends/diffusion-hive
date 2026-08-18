@@ -18,6 +18,10 @@ using this document.
 
 - API key: `qpk_...` from the QuickPod console (Settings → API Keys).
 - Set `QUICKPOD_API_KEY` (recommended) or send two headers on every request:
+- **Where the key lives for this project**: stored as a GitHub repo secret
+  `QUICKPOD_API_KEY` on investwfriends/diffusion-hive (usable in CI/workflows as
+  `${secrets.QUICKPOD_API_KEY}`), and locally at `~/.quickpod.json`
+  (`{"token": "qpk_..."}`) on the original machine. Do not commit the key to git.
   - `X-API-Key: <key>`
   - `Authorization: ApiKey <key>`
 - Base URL: `https://api.quickpod.org`
